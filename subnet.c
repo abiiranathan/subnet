@@ -77,8 +77,8 @@ Subnet create_subnet_from_string(const char *subnet_string) {
   }
 
   // Calculate subnet mask
-  if (prefix_length <= 0 || prefix_length > 32) {
-    perror("Invalid prefix length");
+  if (prefix_length < 24 || prefix_length > 32) {
+    perror("Unsupported CIDR prefix. Supported range is from /24 to /32");
     exit(EXIT_FAILURE);
   }
 
