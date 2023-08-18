@@ -53,7 +53,7 @@ int main() {
   printf("\n\nNetwork ID: 192.168.4.0/24\n");
   printf("Table for creation of 4 subnets:\n");
 
-  SubnetInfo *subnet_info = get_subnet_table("192.168.4.0/23", 10);
+  SubnetInfo *subnet_info = get_subnet_table("192.168.4.0/24", 10);
   printf("\n\nNew Subnet Mask: %s\n", subnet_info->subnet_mask);
   print_subnet_table(subnet_info, 10);
   free(subnet_info);
